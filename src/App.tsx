@@ -8,6 +8,10 @@ import { SiTypescript,SiMysql, SiAmazonaws } from "react-icons/si"
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import ExperienceCard from "./components/experience/card";
+import Text from "./components/text";
+import { Contact } from "./components/contact";
+
 
 
 const LeftBar = styled("aside", {
@@ -31,13 +35,12 @@ const LeftBar = styled("aside", {
 
 const Profile = styled("img", {
   width: "200px",
-  borderRadius: "$md",
+  borderRadius: "50%",
   marginTop: "48px",
 })
 
 const Container = styled("div", {
-  gap: "$4",
-  maxWidth: "1020px",
+  maxWidth: "1040px",
   margin: "0 auto",
   width: "100%",
   backgroundColor: "#282b2c",
@@ -54,9 +57,10 @@ const Container = styled("div", {
 })
 
 const Content = styled("div", {
+  padding: "$4",
   color: "#dcd9d4",
   marginTop: "64px",
-  height: "100vh",
+  height: "auto",
   display: "flex",
   alignItems: "flex-start",
   flexDirection: "column",
@@ -85,7 +89,16 @@ const Content = styled("div", {
           textDecoration: "underline",
         }
       }
+    },
+    '&:after': {
+      content: '""',
+      display: "block",
+      width: "100%",
+      height: "1px",
+      background: "#70685c",
+      marginTop: "$8",  
     }
+
   },
   "@media (max-width: 767px)": {
     marginTop: "0",
@@ -197,19 +210,7 @@ function App() {
 
 
 
-const ExperienceCard = ({name,description,link,skills}: {name: string, description: string, link?:string, skills: string[] }) => {
-  return (
-    <div>
-    <h3>{name}</h3>
-    <p>{description}</p>
-    <p>
-      {skills.map(skill => (
-        <span>{skill}</span>
-      ))}
-    </p>
-  </div>
-  )
-}
+
 
 
 
@@ -218,6 +219,19 @@ const ExperienceCard = ({name,description,link,skills}: {name: string, descripti
     <Container>
     <LeftBar>
       <Profile src={profile} alt="profile" />
+      <Text
+        size="large"
+        weight="regular"
+        color="secondary"
+        lineHeight="large"
+        align="center">Thiago Freire</Text>
+      <Text
+        size="small"
+        weight="regular"
+        color="secondary"
+        lineHeight="large"
+        align="center">Software Engineer</Text>
+        
       <SocialList>
         <li>
         <a href="https://github.com/treepo1" target={"_blank"}>
@@ -226,7 +240,7 @@ const ExperienceCard = ({name,description,link,skills}: {name: string, descripti
       </a>
       </li>
       <li>
-      <a href="https://www.linkedin.com/in/thiago-sobral-8b4668229/" target={"_blank"}>
+      <a href="https://www.linkedin.com/in/thiago-freire-8b4668229/" target={"_blank"}>
         <FaLinkedin />
         <span>Follow me on Linkedin</span>
       </a>
@@ -300,8 +314,10 @@ const ExperienceCard = ({name,description,link,skills}: {name: string, descripti
       </section>
       <section>
         <h3>Experience</h3>
-        <ExperienceCard name="Fullstack Developer" description="eee" skills={['php']} />
+        <ExperienceCard name="Freelancer" description="eee" skills={['PHP','React','Node','Typescript']} />
       </section>
+
+      <Contact></Contact>
     </Content>
     </Container>
     </React.Fragment>

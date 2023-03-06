@@ -19,7 +19,7 @@ export const globalStyles = globalCss({
     'body, input, button': {
         fontFamily: "Roboto, sans-serif",
         fontWeight: 400,
-        background: "#00588d",
+        backgroundColor: "#00588d",
         margin: 0,
     },
 
