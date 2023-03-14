@@ -7,7 +7,7 @@ const experiences = [
         duration: "1 year until now",
     },
     {
-        name: "Freelance FullStack Developer",
+        name: "Freelancer",
         description: `Como freelancer, atuo desde a etapa de análise do projeto, que envolve reuniões com cliente, entendimento do problema, definição de requisitos e regras de negócio até o processo de implementação com divisão de tarefas, estipulação de prazos, scrum e CI/CD de aplicações.`,
         skills: ["React", "Node.js"],
         period: "2021 - Present",
