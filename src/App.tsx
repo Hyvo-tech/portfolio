@@ -11,6 +11,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import ExperienceCard from "./components/experience/card";
 import Text from "./components/text";
 import { Contact } from "./components/contact";
+import experiences from "../shared/experience"
 
 
 
@@ -71,6 +72,7 @@ const Content = styled("div", {
     }
   },
   section: {
+    width: "100%",
     marginTop: "$8",
     h3: {
       fontSize: "$2xl",
@@ -89,14 +91,6 @@ const Content = styled("div", {
           textDecoration: "underline",
         }
       }
-    },
-    '&:after': {
-      content: '""',
-      display: "block",
-      width: "100%",
-      height: "1px",
-      background: "#70685c",
-      marginTop: "$8",  
     }
 
   },
@@ -314,7 +308,15 @@ function App() {
       </section>
       <section>
         <h3>Experience</h3>
-        <ExperienceCard name="Freelancer" description="eee" skills={['PHP','React','Node','Typescript']} />
+        {
+          experiences.map((exp) => (
+            <ExperienceCard name={exp.name}
+            description={exp.description}
+            period={exp.period}
+            duration={exp.duration}
+            skills={exp.skills} />
+          ))
+        }
       </section>
 
       <Contact></Contact>
