@@ -2,7 +2,7 @@ const experiences = [
     {
         name: "SEDURBI",
         description:`Na SEDURBI, atuo principalmente como desenvolvedor fullstack na manutenção e criação de sistemas web completos que vão desde portais para a gestão de obras do estado de Sergipe até sistemas internos de gerenciamento.`,
-        skills: ["React", "Node.js", "PHP", "MySQL"],
+        skills: ["React", "Node.js"],
         period: "2022 - Present",
         duration: "1 year until now",
     },
