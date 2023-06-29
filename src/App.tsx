@@ -218,7 +218,7 @@ function App() {
         weight="regular"
         color="secondary"
         lineHeight="large"
-        align="center">Thiago Freire</Text>
+        align="center">Augusto Figueredo</Text>
       <Text
         size="small"
         weight="regular"
@@ -259,7 +259,7 @@ function App() {
 
     </LeftBar>
     <Content>
-      <h1>Hi, I'm <span>Thiago</span></h1>
+      <h1>Hi, I'm <span>Augusto</span></h1>
       <h2>FullStack Developer</h2>
       <section>
         <h3>About me</h3>
